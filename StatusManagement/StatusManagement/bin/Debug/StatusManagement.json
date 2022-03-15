@@ -1,0 +1,42 @@
+{
+  "StatusResponseToHttp": {
+    "HttpPort": "18055"
+  },
+  "StatusSource": [
+    {
+      "Name": "Modbus",
+      "Port": "8001"
+    },
+    {
+      "Name": "Ping",
+      "Port": "8004"
+    }
+  ],
+  "BroadcastTo": [
+    {
+      "Name": "Modbus",
+      "Apps": [
+        {
+          "Name": "OPC1",
+          "Ip": "127.0.0.1",
+          "Port": "8003"
+        },
+        {
+          "Name": "DataProcess",
+          "Ip": "127.0.0.1",
+          "Port": "8005"
+        }
+      ]
+    },
+    {
+      "Name": "Ping",
+      "Apps": [
+        {
+          "Name": "OPC2",
+          "Ip": "127.0.0.1",
+          "Port": "8007"
+        }
+      ]
+    }
+  ]
+}
